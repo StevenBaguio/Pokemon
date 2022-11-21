@@ -10,7 +10,7 @@ package exercise06photonbaguiosteven;
  */
 import java.util.ArrayList;
 
-public class Monster {
+public abstract class Monster {
     private final String name, type, strongAgainst, weakAgainst;
     int maxHP, hp, atk, def; //changed atk and def from private
     private int xp, lvl;
@@ -71,9 +71,7 @@ public class Monster {
         }
     }
 
-    public void special(){
-        System.out.println(name + " did a pose.");
-    }
+    public abstract void special();
 
     public void restoreHealth(){
         hp = maxHP;
