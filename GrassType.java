@@ -11,8 +11,8 @@ package exercise06photonbaguiosteven;
 public class GrassType extends Monster{
     public GrassType(String n, int hp, int base){
         super(n, "Fire", "Grass", "Water", hp, base);
-        this.atk = (int) (base*1.3);
-        this.def = (int) (base*0.7);
+        this.atk = (int) (base*0.7);
+        this.def = (int) (base*1.3);
     }
     
     @Override
