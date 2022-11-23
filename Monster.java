@@ -10,7 +10,7 @@ package exercise06photonbaguiosteven;
  */
 import java.util.ArrayList;
 
-public abstract class Monster {
+public abstract class Monster implements Interactive {
     private final String name, type, strongAgainst, weakAgainst;
     int maxHP, hp, atk, def; //changed atk and def from private
     private int xp, lvl;
@@ -30,6 +30,9 @@ public abstract class Monster {
 
     public String getName() {
         return name;
+    }
+    public String getType(){
+        return type;
     }
     public int getMaxHP() {
         return maxHP;
@@ -75,6 +78,11 @@ public abstract class Monster {
 
     public void restoreHealth(){
         hp = maxHP;
+    }
+    
+    public void interact(Trainer n){
+        System.out.println(n.getName() + " interacted with " + this.getName());
+        System.out.println("Name: " + this.getName() + "\nType: " + this.getType() );
     }
 
 }
